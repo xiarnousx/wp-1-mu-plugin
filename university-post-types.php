@@ -55,7 +55,7 @@ function university_post_types() {
         'rewrite' => [
             'slug' => 'professors'
         ],
-        'supports' => ['title', 'editor']
+        'supports' => ['title', 'editor', 'thumbnail']
     ]);
 }
 add_action('init', 'university_post_types');
