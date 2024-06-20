@@ -57,5 +57,24 @@ function university_post_types() {
         ],
         'supports' => ['title', 'editor', 'thumbnail']
     ]);
+
+    register_post_type('campus', [
+        'show_in_rest' => true,
+        'public' => true,
+        'labels' => [
+            'name' => 'Campuses',
+            'add_new_item' => 'Add New Campus',
+            'edit_item' => 'Edit Campus',
+            'all_items' => 'All Campuses',
+            'add_new' => 'Add New Campus',
+            'singular_name' => 'Campus'
+        ],
+        'menu_icon' => 'dashicons-location-alt',
+        'has_archive' => true,
+        'rewrite' => [
+            'slug' => 'campuses'
+        ],
+        'supports' => ['title', 'editor', 'excerpt']
+    ]);
 }
 add_action('init', 'university_post_types');
