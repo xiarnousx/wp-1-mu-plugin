@@ -17,7 +17,9 @@ function university_post_types() {
         'rewrite' => [
             'slug' => 'events'
         ],
-        'supports' => ['title', 'editor', 'excerpt']
+        'supports' => ['title', 'editor', 'excerpt'],
+        'capability_type' => 'event',
+        'map_meta_cap' => true,
     ]);
 
     register_post_type('program', [
@@ -74,7 +76,9 @@ function university_post_types() {
         'rewrite' => [
             'slug' => 'campuses'
         ],
-        'supports' => ['title', 'editor', 'excerpt']
+        'supports' => ['title', 'editor', 'excerpt'],
+        'capability_type' => 'campus',
+        'map_meta_cap' => true,
     ]);
 }
 add_action('init', 'university_post_types');
